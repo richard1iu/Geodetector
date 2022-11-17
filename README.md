@@ -7,11 +7,13 @@
 Each of the tasks can be accomplished by the Geodetector `q-statistic`
 
 Geodetector: measure SSH and to make attribution for/by SSH (Fig. 1)
+
 ![Fig.1 Principle of Geodetector](http://www.geodetector.cn/index.files/image018.jpg)
 
 1. measure and find SSH among data;
 2. test the coupling between two variables Y and X, according to their SSHs, without assumption of linearity of the association;
 3. investigate **interaction between two explanatory variables** X1 and X2 to a response variable Y, without any specific form of interaction such as the assumed product in econometrics (Fig. 2). 
+
 ![Fig.2 Interaction between explanatory variables X1 and X2 impacting on a response variable Y: q(Y|X1X2).](http://www.geodetector.cn/index.files/image043.jpg)
 
 
