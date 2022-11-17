@@ -12,9 +12,8 @@ Geodetector: measure SSH and to make attribution for/by SSH (Fig. 1)
 
 1. measure and find SSH among data;
 2. test the coupling between two variables Y and X, according to their SSHs, without assumption of linearity of the association;
-3. investigate **interaction between two explanatory variables** X1 and X2 to a response variable Y, without any specific form of interaction such as the assumed product in econometrics (Fig. 2). 
-
-![Fig.2 Interaction between explanatory variables X1 and X2 impacting on a response variable Y: q(Y|X1X2).](http://www.geodetector.cn/index.files/image043.jpg)
+3. investigate **interaction between two explanatory variables** X1 and X2 to a response variable Y, without any specific form of interaction such as the assumed product in econometrics (Fig. 2).  
+![Fig.2 Interaction between explanatory variables X1 and X2 impacting on a response variable Y: q(Y|X1X2)](http://www.geodetector.cn/index.files/image043.jpg)
 
 
 ## Interpretation of q value (Fig.1).
@@ -33,9 +32,9 @@ The value of q is strictly `within [0, 1]`.
 
 Geodetector q statistic helps understand **spatial confounding, sample bias and overfitting.**
 
-1. `Confounding arises` if a global model was applied to a SH population, leading to statistical insignificance. The problem can be simply avoided if SH is identified (by Geodetector q statistic) then `modelling in the strata, separately`.
-2. `A sample would be biased` if a population is SH and the sample do not cover all strata. The problem can be solved if SH is identified (by Geodetector q statistic) then `apply bias remedy models` such as `Heckman regression` and `Bshade method`.
-3. Local models aim to overcome heterogeneity but often suffer `overfitting` and too many parameters to interpret. The problems can be avoided if `modelling in strata` or `stratifying the outputs of a local model` then interpreting the stratified parameters.
+1. `Confounding arises` if a global model was applied to a SH population, leading to statistical insignificance. The problem can be simply avoided if SH is identified (by Geodetector q statistic) then **modelling in the strata, separately**.
+2. `A sample would be biased` if a population is SH and the sample do not cover all strata. The problem can be solved if SH is identified (by Geodetector q statistic) then **apply bias remedy models** such as `Heckman regression` and `Bshade method`.
+3. Local models aim to overcome heterogeneity but often suffer `overfitting` and too many parameters to interpret. The problems can be avoided if **modelling in strats** or **stratifying the outputs of a local model** then interpreting the stratified parameters.
 
 ## Functions of Geodetector:
 
