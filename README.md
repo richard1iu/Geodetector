@@ -42,3 +42,20 @@ Geodetector q statistic helps understand **spatial confounding, sample bias and 
 2. The `factor detector` q-statistic measures the degree of SH of a variable Y; and the determinant power of an explanatory variable X of Y;
 3. The `ecological detector` identifies the difference of the impacts on Y between two explanatory variables X1 ~ X2;
 4. The `interaction detector` reveals whether the risk factors X1 and X2 (and more X) have an interactive influence on a response variable Y (Fig.2).
+
+## Tutorial of Geodetector
+> Note: Y is numerical; **X MUST be categorical**, e.g. landuse types, seasons. If X is numerical it should be transformed to be categorical, e.g. GDP per capita is stratified into 5 strata
+
+### script
+
+
+### output
+Geodetector output 4 files:
+1. risk detector
+2. factor detector
+3. ecological detector
+4. interaction detector.
+
+#### 1.Risk detector 
+In the “Risk detector” sheet (Fig. 7), result information for each environmental risk factor is presented in two tables. The first table gives the average disease incidence in each stratum of a risk factor, the name of which is written at the top left of the table. The second table gives the statistically significant difference in the average disease incidence between two strata; if there is a significant difference, the corresponding value is “Y”, else it is “N”.
+
