@@ -1,5 +1,5 @@
 # Geodetector
-[Source:Wang JF,Geodetector](http://www.geodetector.cn/)
+[Source: Wang JF-{Geodetector}](http://www.geodetector.cn/)
 ## Define
 `Spatial Stratified Heterogeneity (SSH)` refers to the phenomena that the within strata are more similar than the between strata. Examples are landuse types and climate zones in spatial data, seasons and years in time series, occupations, age groups, incomes strata. SSH occurs in all scales from universe to DNA, offers windows for human beings to understand the nature since Aristotle time.
 
@@ -74,10 +74,11 @@ Present the each environmental risk factor's **q values and p values**.
 Present the statistically significant differences between two environmental risk factors. If Y(X1) (risk factor names in row) was significantly bigger than Y(X2) (risk factor names in column), the associated value is “Y”, while “N” expresses the opposite meaning.
 
 #### 4.Interaction detector
-“Interaction relationships” represent the interaction relationship for the two factors. The relationship is defined in a coordinate axis. It has 5 intervals, including - “(-∞，min(q(x), q(y)))”
-- “(min(q(x), q(y)), max(q(x), q(y)))”
-- “(max(q(x), q(y)), q(x) + q(y))”
-- “q(x) + q(y)”
-- “( q(x) + q(y),+∞)”
+“Interaction relationships” represent the interaction relationship for the two factors. The relationship is defined in a coordinate axis. It has 5 intervals, including
+- “( -∞，min(q(x), q(y)) )”
+- “( min(q(x), q(y)), max(q(x), q(y)) )”
+- “( max(q(x), q(y)), q(x) + q(y) )”
+- “ q(x) + q(y) ”
+- “( q(x) + q(y), +∞ )”
 
 The interaction relationship is determined by the location of q(xÇy) in the 5 intervals.
