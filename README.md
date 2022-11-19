@@ -1,26 +1,23 @@
 # Geodetector
+A note for understanding and review the great work of geodetector, some paragraphs and figures are copied directly from original file.
 [Source: Wang JF-{Geodetector}](http://www.geodetector.cn/)
 ## Define
-`Spatial Stratified Heterogeneity (SSH)` refers to the phenomena that the within strata are more similar than the between strata. Examples are landuse types and climate zones in spatial data, seasons and years in time series, occupations, age groups, incomes strata. SSH occurs in all scales from universe to DNA, offers windows for human beings to understand the nature since Aristotle time.
+`Spatial Stratified Heterogeneity (SSH)` refers to the difference within strata less than between strata. Such as landuse types and climate zones in spatial data, seasons and years in time series, occupations, age groups, incomes strata. 
 
-Spatial stratified heterogeneity (SSH), referring to the within strata are more similar than the between strata, such as landuse types and climate zones, is ubiquitous in spatial data. SSH instead of random is a set of information, which has been being a window for humans to understand the nature since Aristotle time. In another aspect, a model with global parameters would be confounded if input data is SSH, the problem dissolves if SSH is identified so simple models can be applied to each stratum separately. Note that the “spatial” here can be either geospatial or the space in mathematical meaning.
-
-
-where N and σ2 stand for the number of units and the variance of Y in study area, respectively; the population Y is composed of L strata (h = 1, 2, …, L), Nh and σh2 stand for the number of units and the variance of Y in stratum h, respectively. The strata of Y (red polygons in Figure 1) are a partition of Y, either by itself ( h(Y) in Figure 1) or by an explanatory variable X which is a categorical variable ( h(Y) in Figure 1). X should be stratified if it is a numerical variable, the number of strata L might be 2-10 or more, according to prior knowledge or a classification algorithm.
+**SSH occurs in all scales from universe to DNA**.
 
 ## Tasks
-Each of the tasks can be accomplished by the Geodetector `q-statistic`
+All tasks can be accomplished by the Geodetector `q-statistic`
+
+![Fig.1 Principle of Geodetector](http://www.geodetector.cn/index.files/image018.jpg)  
 where N and σ2 stand for the number of units and the variance of Y in study area, respectively; 
 
 Geodetector: measure SSH and to make attribution for/by SSH (Fig. 1)
-
-![Fig.1 Principle of Geodetector](http://www.geodetector.cn/index.files/image018.jpg)
-
 1. measure and find SSH among data;
 2. test the coupling between two variables Y and X, according to their SSHs, without assumption of linearity of the association;
-3. investigate **interaction between two explanatory variables** X1 and X2 to a response variable Y, without any specific form of interaction such as the assumed product in econometrics (Fig. 2).  
-![Fig.2 Interaction between explanatory variables X1 and X2 impacting on a response variable Y: q(Y|X1X2)](http://www.geodetector.cn/index.files/image043.jpg)
+3. investigate **interaction between two explanatory variables** X1 and X2 to a response variable Y, without any specific form of interaction such as the assumed product in econometrics (Fig. 2).
 
+![Fig.2 Interaction between explanatory variables X1 and X2 impacting on a response variable Y: q(Y|X1X2)](http://www.geodetector.cn/index.files/image043.jpg)
 
 ## Interpretation of q value (Fig.1).
 
@@ -34,7 +31,8 @@ The value of q is strictly `within [0, 1]`.
   - then q = 0 indicates that there is no coupling between Y and X
   - q = 1 indicates that Y is completely determined by X
   - X explains 100q% of Y.
-  **Please notice that the q-statistic measures the association between X and Y, both linearly and nonlinearly.**
+  
+**q-statistic measures the association between X and Y (or X1 and X2), both linearly and nonlinearly.**
 
 Geodetector q statistic helps understand **spatial confounding, sample bias and overfitting.**
 
@@ -53,8 +51,9 @@ Geodetector q statistic helps understand **spatial confounding, sample bias and 
 > Note: Y is numerical; **X MUST be categorical**, e.g. landuse types, seasons. If X is numerical it should be transformed to be categorical, e.g. GDP per capita is stratified into 5 strata
 
 ### script
-
-
+R package: [{geodetector}](https://cran.r-project.org/web/packages/geodetector/vignettes/geodetector.html)
+R package: [{GD}](https://cran.r-project.org/web/packages/GD/GD.pdf)
+Excel file: (http://www.geodetector.cn/#_Download,_with_Datasets_1)
 ### output
 Geodetector output 4 files:
 1. risk detector
