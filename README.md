@@ -1,10 +1,16 @@
 # Geodetector
-
+[Source:Wang JF,Geodetector](http://www.geodetector.cn/)
 ## Define
 `Spatial Stratified Heterogeneity (SSH)` refers to the phenomena that the within strata are more similar than the between strata. Examples are landuse types and climate zones in spatial data, seasons and years in time series, occupations, age groups, incomes strata. SSH occurs in all scales from universe to DNA, offers windows for human beings to understand the nature since Aristotle time.
 
+Spatial stratified heterogeneity (SSH), referring to the within strata are more similar than the between strata, such as landuse types and climate zones, is ubiquitous in spatial data. SSH instead of random is a set of information, which has been being a window for humans to understand the nature since Aristotle time. In another aspect, a model with global parameters would be confounded if input data is SSH, the problem dissolves if SSH is identified so simple models can be applied to each stratum separately. Note that the “spatial” here can be either geospatial or the space in mathematical meaning.
+
+
+where N and σ2 stand for the number of units and the variance of Y in study area, respectively; the population Y is composed of L strata (h = 1, 2, …, L), Nh and σh2 stand for the number of units and the variance of Y in stratum h, respectively. The strata of Y (red polygons in Figure 1) are a partition of Y, either by itself ( h(Y) in Figure 1) or by an explanatory variable X which is a categorical variable ( h(Y) in Figure 1). X should be stratified if it is a numerical variable, the number of strata L might be 2-10 or more, according to prior knowledge or a classification algorithm.
+
 ## Tasks
 Each of the tasks can be accomplished by the Geodetector `q-statistic`
+where N and σ2 stand for the number of units and the variance of Y in study area, respectively; 
 
 Geodetector: measure SSH and to make attribution for/by SSH (Fig. 1)
 
@@ -57,5 +63,21 @@ Geodetector output 4 files:
 4. interaction detector.
 
 #### 1.Risk detector 
-In the “Risk detector” sheet (Fig. 7), result information for each environmental risk factor is presented in two tables. The first table gives the average disease incidence in each stratum of a risk factor, the name of which is written at the top left of the table. The second table gives the statistically significant difference in the average disease incidence between two strata; if there is a significant difference, the corresponding value is “Y”, else it is “N”.
+The results of **each environmental risk factor** are presented in two table: 
+1. The first table gives the **average Y in each stratum** of a risk factor. 
+2. The second table gives the statistically significant difference in the average Y **between two strata** of X; if there is a significant difference, the corresponding value is “Y”, else it is “N”.
 
+#### 2.Factos detector
+Present the each environmental risk factor's **q values and p values**.
+
+#### 3.Ecological detector
+Present the statistically significant differences between two environmental risk factors. If Y(X1) (risk factor names in row) was significantly bigger than Y(X2) (risk factor names in column), the associated value is “Y”, while “N” expresses the opposite meaning.
+
+#### 4.Interaction detector
+“Interaction relationships” represent the interaction relationship for the two factors. The relationship is defined in a coordinate axis. It has 5 intervals, including - “(-∞，min(q(x), q(y)))”
+- “(min(q(x), q(y)), max(q(x), q(y)))”
+- “(max(q(x), q(y)), q(x) + q(y))”
+- “q(x) + q(y)”
+- “( q(x) + q(y),+∞)”
+
+The interaction relationship is determined by the location of q(xÇy) in the 5 intervals.
