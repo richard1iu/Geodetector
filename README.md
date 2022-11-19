@@ -51,9 +51,9 @@ Geodetector q statistic helps understand **spatial confounding, sample bias and 
 > Note: Y is numerical; **X MUST be categorical**, e.g. landuse types, seasons. If X is numerical it should be transformed to be categorical, e.g. GDP per capita is stratified into 5 strata
 
 ### script
-R package: [{geodetector}](https://cran.r-project.org/web/packages/geodetector/vignettes/geodetector.html)
-R package: [{GD}](https://cran.r-project.org/web/packages/GD/GD.pdf)
-Excel file: (http://www.geodetector.cn/#_Download,_with_Datasets_1)
+1. R package: [{geodetector}](https://cran.r-project.org/web/packages/geodetector/vignettes/geodetector.html)
+2. R package: [{GD}](https://cran.r-project.org/web/packages/GD/GD.pdf)
+3. Excel file: (http://www.geodetector.cn/#_Download,_with_Datasets_1)
 ### output
 Geodetector output 4 files:
 1. risk detector
