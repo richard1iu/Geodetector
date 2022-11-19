@@ -82,3 +82,31 @@ Present the statistically significant differences between two environmental risk
 - “( q(x) + q(y), +∞ )”
 
 The interaction relationship is determined by the location of q(xÇy) in the 5 intervals.
+
+## FAQs
+### Q1. How to make a partition (stratification; classification) for a variable x?
+1. If x is `categorical`, e.g. landuse types, do nothing;
+2. If x is `numerical` 
+- Stratification according to **some industry consensus**, e.g. UN standard for the GDP per capita: poor, middle, …; or
+- Ordered then equally divided 2~7 strata. **Use the stratification with bigger q** and interpretable; or
+- Try different stratifications, **use the one with biggest q**. The philosophy like regression (OLS), in which try different {b} and use the one maximizing R2.
+
+### Q2. Will stratification vary with variables?
+Yes, like regression in which coefficient b value varies with variables;
+
+### Q3. Software reports error or abnormal result
+Numerical x has to be stratified (see Q1), **no less than 2 sample units in each stratum**.
+
+### Q4. When p value should be reported?
+1. When measuring SSH of a variable y: 100q% SSH degree, at p sig. level
+2. When attributing y to x: x explains 100q% of y, no need to report p value.
+
+### Q5. Should Sqi = 1? where i stands for i-th variable
+No, because of nonlinear coupling between y and xi; or interaction between xi. For example, U shape association between human mortality (y) and temperature (x)
+
+### Q6. Direction of q?
+**No directions for nonlinearity**, e.g. Kuznets curve; U shape association between human mortality (y) and temperature (x). But, you may check linear direction in each of strata.
+
+### Q7. Big sample, say a remote sensing image composed by 1024´1024 pixels
+1. **Resampling**, 100 sample units in each of strata are usually enough
+2. Use R-Geodetector software
